@@ -1,0 +1,13 @@
+#HEADERS = program.h headers.h
+
+default: 131044019_main
+
+131044019_main.o: 131044019_main.c $(HEADERS)
+    gcc -c 131044019_main.c -o 131044019_main.o
+
+131044019_main: 131044019_main.o
+    gcc 131044019_main.o -o 131044019_main
+
+clean:
+    -rm -f 131044019_main.o
+    -rm -f 131044019_main
